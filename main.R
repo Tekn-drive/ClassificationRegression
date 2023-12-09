@@ -49,7 +49,7 @@ train_data <- filtered_data[trainIndex, ]
 test_data <- filtered_data[-trainIndex, ]
 
 # Train the model
-rf_model <- randomForest(Potability ~ ., filtered_data=train_data, ntree=500, importance=TRUE)
+rf_model <- randomForest(Potability ~ ., data=train_data, ntree=500, importance=TRUE)
 
 # Make predictions
 predictions <- predict(rf_model, newdata=test_data)
